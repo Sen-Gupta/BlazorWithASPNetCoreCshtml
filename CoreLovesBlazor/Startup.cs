@@ -51,6 +51,7 @@ namespace CoreLovesBlazor
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapBlazorHub();
+                endpoints.MapFallbackToController("Blazor", "Home");
             });
         }
     }
