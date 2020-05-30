@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NorthwindBlazor.Data;
 
 namespace CoreLovesBlazor
 {
@@ -24,6 +25,12 @@ namespace CoreLovesBlazor
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddScoped<NorthwindContext>();
+            services.AddScoped<NorthwindService>();
+            services.AddScoped<NorthwindODataService>();
+
+
             services.AddControllersWithViews();
         }
 

@@ -7,6 +7,7 @@
     <title>@ViewData["Title"] - CoreLovesBlazor</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css">
 </head>
 <body>
     <header>
@@ -24,6 +25,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-dark" href="/counter">The Button </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/datagrid">The Grid </a>
                         </li>
                     </ul>
                 </div>
@@ -46,5 +53,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
     <script src="_framework/blazor.server.js"></script>
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
 </body>
 </html>
